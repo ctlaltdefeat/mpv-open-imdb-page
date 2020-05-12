@@ -10,9 +10,9 @@ The script should be multi-platform, as far as I'm aware.
 
 You need Python 3 installed and in path, as well as the modules ```guessit``` and ```imdbpy```. The latest git version of ```imdbpy``` should be used:
 
-```pip install guessit
-pip install git+https://github.com/alberanid/imdbpy
-```
+```pip install guessit```
+
+```pip install git+https://github.com/alberanid/imdbpy```
 
 # Install
 Copy the ```.lua``` and ```.py``` files to your mpv scripts folder (if you're unfamiliar with its location, check the mpv documentation).
