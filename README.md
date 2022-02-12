@@ -10,12 +10,18 @@ Scene/release-type file names are supported.
 
 The script is tested on Windows and Linux, and should work on any platform with the dependencies correctly installed.
 
+## Python and Packages
+
 You need Python 3 installed and in path, as well as the modules ```guessit``` and ```imdbpy```. The latest git version of ```imdbpy``` should be used:
 
 ```sh
 pip install guessit
 pip install git+https://github.com/alberanid/imdbpy
 ```
+
+## mpv
+
+The script won't load for any mpv build below v0.33.1 (Apr 05, 2021). Since that release includes security fixes, you should upgrade to the [newest version](https://mpv.io/installation/) anyways. Note that the default repos of Debian/Ubuntu are often outdated.
 
 # Install
 
