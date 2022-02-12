@@ -81,4 +81,4 @@ function launch_imdb()
 end
 
 -- change key binding as desired
-mp.add_key_binding('ctrl+i', 'launch-imdb', launch_imdb)
+mp.add_key_binding('ctrl+i', 'open-imdb-page', launch_imdb)
