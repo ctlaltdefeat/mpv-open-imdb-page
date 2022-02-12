@@ -9,10 +9,12 @@ end
 function launch_imdb()
     mp.osd_message("Finding IMDb URL...", 30)
     local py_script_path = mp.get_script_directory().."/open-imdb-page.py"
-    local table = {}
-    table.name = "subprocess"
-    table.args = {"python", py_script_path, mp.get_property("filename")}
-    local cmd = mp.command_native_async(table, callback)
+    local cmd = mp.command_native_async({
+            name = "subprocess",
+            args = {"python", py_script_path, mp.get_property("filename")}
+        },
+        callback
+    )
 end
 
 -- change key binding as desired 
