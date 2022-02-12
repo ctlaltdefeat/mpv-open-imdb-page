@@ -8,10 +8,10 @@ end
 
 function launch_imdb()
     mp.osd_message("Finding IMDb URL...", 30)
-    local script_dir = debug.getinfo(1).source:match("@?(.*/)")
+    local py_script_path = mp.get_script_directory().."/open-imdb-page.py"
     local table = {}
     table.name = "subprocess"
-    table.args = {"python", script_dir.."open-imdb-page.py", mp.get_property("filename")}
+    table.args = {"python", py_script_path, mp.get_property("filename")}
     local cmd = mp.command_native_async(table, callback)
 end
 
