@@ -1,3 +1,19 @@
+--[[
+
+mpv-open-imdb-page | https://github.com/ctlaltdefeat/mpv-open-imdb-page
+
+This mpv script opens the IMDb page that corresponds to the currently playing media file,
+whether a film or a specific TV episode.
+
+This script requires open-imdb-page.py to be in the same directory.
+The directory should be placed inside the script folder of mpv's configuration.
+
+Required PIP packages: guessit git+https://github.com/alberanid/imdbpy
+
+Assigns the script-binding launch-imdb as Ctrl+i
+
+]]
+
 function get_python_binary()
     local msg = ""
 
