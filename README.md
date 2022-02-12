@@ -12,11 +12,11 @@ The script is tested on Windows and Linux, and should work on any platform with 
 
 ## Python and Packages
 
-You need Python 3 installed and in path, as well as the modules ```guessit``` and ```imdbpy```. The latest git version of ```imdbpy``` should be used:
+You need Python 3 installed and in path, as well as the modules ```guessit``` and ```cinemagoer```. The latest git version of ```cinemagoer``` should be used:
 
 ```sh
 pip install guessit
-pip install git+https://github.com/alberanid/imdbpy
+pip install git+https://github.com/cinemagoer/cinemagoer
 ```
 
 ## mpv
@@ -39,7 +39,7 @@ git clone --depth=1 https://github.com/ctlaltdefeat/mpv-open-imdb-page %APPDATA%
 git -C ~/.config/mpv/scripts/mpv-open-imdb-page pull
 
 # To update dependencies:
-pip install --upgrade guessit git+https://github.com/alberanid/imdbpy
+pip install --upgrade guessit git+https://github.com/cinemagoer/cinemagoer
 ```
 
 # Usage
