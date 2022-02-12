@@ -8,7 +8,9 @@ whether a film or a specific TV episode.
 This script requires open-imdb-page.py to be in the same directory.
 The directory should be placed inside the script folder of mpv's configuration.
 
-Required PIP packages: guessit git+https://github.com/alberanid/imdbpy
+Requires Python 3 and the following pip packages:
+guessit
+cinemagoer
 
 Assigns the script-binding launch-imdb as Ctrl+i
 
@@ -65,7 +67,7 @@ function launch_imdb()
     if python_binary ~= nil then
         mp.msg.info(python_msg)
         mp.msg.info("Calling open-imdb-page.py")
-        mp.osd_message("Searching IMDb URL...", 30)
+        mp.osd_message("Searching IMDb...", 30)
         local cmd = mp.command_native_async({
                 name = "subprocess",
                 args = {
