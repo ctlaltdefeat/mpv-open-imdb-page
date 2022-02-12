@@ -1,13 +1,27 @@
+
+#!/usr/bin/env python
+"""
+This script takes a media filename of a movie or TV episode as parameter
+and opens the corresponding IMDb page with the webbrowser.
+
+Requires the following pip packages:
+guessit
+cinemagoer
+
+This file is part of the mpv-open-imdb-page mpv script:
+https://github.com/ctlaltdefeat/mpv-open-imdb-page
+"""
+
 import sys
 import webbrowser
 
 from guessit import guessit
-from imdb import IMDb
+from imdb import Cinemagoer
 
 
 def get_imdb_url(filename):
     result = None
-    ia = IMDb()
+    ia = Cinemagoer()
     g = guessit(filename)
     title = g["title"]
     if "year" in g:
