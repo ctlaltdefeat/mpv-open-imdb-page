@@ -63,7 +63,9 @@ end
 function launch_imdb()
     local python_binary, python_msg = get_python_binary()
     if python_binary ~= nil then
-        mp.osd_message("Finding IMDb URL...", 30)
+        mp.msg.info(python_msg)
+        mp.msg.info("Calling open-imdb-page.py")
+        mp.osd_message("Searching IMDb URL...", 30)
         local cmd = mp.command_native_async({
                 name = "subprocess",
                 args = {
@@ -75,8 +77,9 @@ function launch_imdb()
             callback
         )
     else
-       mp.osd_message("ERROR: "..python_msg, 10)
-       return
+        mp.msg.error(python_msg)
+        mp.osd_message("ERROR: "..python_msg, 10)
+        return
     end
 end
 
